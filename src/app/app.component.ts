@@ -1,3 +1,4 @@
+import { Bandit } from './bandit/bandit.model';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,10 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'La Casa de Papel';
-  bandits = ["Tóquio", "Rio", "Berlin", "Professor"];
+  bandits = [
+    new Bandit(1, "Professor", "Segio Molina"),
+    new Bandit(2, "Toquio", "Alguma Coisa Flores")
+  ];
 
   filhoFoiClicado(dado){
-    console.log(dado);
+    // console.log(dado);
   }
 
   addBandit(name){

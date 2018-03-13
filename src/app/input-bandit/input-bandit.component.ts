@@ -8,12 +8,23 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class InputBanditComponent {
 
   @Output() newBandit = new EventEmitter();
+  name: string = "";
+  input1Error = true;
 
   constructor() { }
 
-  onSubmit(event, campo){
+  onSubmit(event){
     event.preventDefault();
-    this.newBandit.emit(campo.value);
+    this.name = this.name.substring(0, this.name.length-1)
+    this.newBandit.emit(this.name);
+  }
+
+  validar(){
+    if(this.name == ""){
+      this.input1Error = true;
+    }else{
+      this.input1Error = false;
+    }
   }
 
 }

@@ -1,3 +1,4 @@
+import { Bandit } from './../bandit/bandit.model';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
@@ -7,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class BanditListComponent implements OnInit {
 
-  @Input() bandits;
+  @Input() bandits: Bandit[];
 
   constructor() { }
 

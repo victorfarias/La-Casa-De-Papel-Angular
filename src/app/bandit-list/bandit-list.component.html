@@ -2,6 +2,8 @@
   Lista de bandidos
 </h2>
 <ul>
-  <li *ngFor="let bandit of bandits"> {{ bandit }}</li>
-  
+  <li *ngFor="let i=index;let bandit of bandits;">
+    {{ bandit.id + " - " + bandit.fake_name + " - " +bandit.real_name }}
+  </li>
+
 </ul>
