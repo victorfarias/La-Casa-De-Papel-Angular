@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-bandit-list',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bandit-list.component.css']
 })
 export class BanditListComponent implements OnInit {
+
+  @Input() bandits;
 
   constructor() { }
 

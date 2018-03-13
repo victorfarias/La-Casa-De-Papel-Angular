@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'La Casa de Papel';
+  bandits = ["Tóquio", "Rio", "Berlin", "Professor"];
+
+  filhoFoiClicado(dado){
+    console.log(dado);
+  }
+
+  addBandit(name){
+    this.bandits.push(name);
+  }
 }

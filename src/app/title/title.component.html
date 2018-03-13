@@ -1,9 +1,5 @@
-<h1>
+<h1 [class.nova-cor]="temNovaCor" 
+    [style.font-size]="fontSize+'px'"
+    (click)="onClick()">
     {{ title }}
-</h1>
-<h1>
-    {{ 'Titulo: ' + title }}
-</h1>
-<h1>
-    {{ getTitle() }}
 </h1>
