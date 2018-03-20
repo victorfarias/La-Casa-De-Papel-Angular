@@ -7,6 +7,10 @@ import { AppComponent } from './app.component';
 import { TitleComponent } from './title/title.component';
 import { BanditListComponent } from './bandit-list/bandit-list.component';
 import { InputBanditComponent } from './input-bandit/input-bandit.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { HostagesListComponent } from './hostages-list/hostages-list.component';
+import { routing } from './app.routing';
+
 
 
 @NgModule({
@@ -14,11 +18,14 @@ import { InputBanditComponent } from './input-bandit/input-bandit.component';
     AppComponent,
     TitleComponent,
     BanditListComponent,
-    InputBanditComponent
+    InputBanditComponent,
+    NavbarComponent,
+    HostagesListComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule    
+    FormsModule ,
+    routing   
   ],
   providers: [],
   bootstrap: [AppComponent]

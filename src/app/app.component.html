@@ -1,7 +1,4 @@
 <div class="container">
-  <app-title 
-      [title]="'titulo 1'"
-      (foiClicado)="filhoFoiClicado($event)"></app-title>
-  <app-bandit-list [bandits]="bandits"></app-bandit-list>
-  <app-input-bandit (newBandit)="addBandit($event)"></app-input-bandit>
+  <app-navbar></app-navbar>
+  <router-outlet></router-outlet>  
 </div>
