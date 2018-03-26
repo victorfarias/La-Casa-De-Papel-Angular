@@ -1,4 +1,4 @@
-import { Hostage } from './../hostage/hostage.model';
+import { Hostage } from './../models/hostage.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
