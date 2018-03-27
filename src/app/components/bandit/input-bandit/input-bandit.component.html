@@ -1,0 +1,50 @@
+<form>
+
+    <div class="form-group" >
+        <input 
+              type="number" 
+              class="form-control" 
+              id="inputId" 
+              placeholder="Id do bandido"
+              [(ngModel)]="id_bandit"
+              name="input-id"
+              >
+      </div>
+
+  <div class="form-group" >
+    <!-- <label 
+         class="control-label" 
+         for="inputSuccess1"
+         *ngIf="input1Error">
+            Campo com erro
+    </label> -->
+    <input 
+          type="text" 
+          class="form-control" 
+          id="inputSuccess1" 
+          placeholder="Nome falso do bandido"
+          aria-describedby="helpBlock2"
+          [(ngModel)]="name_fake"
+          name="input-name"
+          >
+    <!-- <span 
+        id="helpBlock2" 
+        class="help-block"
+        *ngIf="input1Error"
+        >A block of help text that breaks onto a new line and may extend beyond one line.</span> -->
+  </div>
+
+  <div class="form-group" >
+    <input 
+          type="text" 
+          class="form-control" 
+          id="inputSuccess2" 
+          placeholder="Nome real do bandido"
+          [(ngModel)]="name_real"
+          name="input-name-real"
+          >
+  </div>
+  <button (click)="onSubmit($event);" 
+      class="btn btn-primary">Adicionar
+    </button>
+</form>

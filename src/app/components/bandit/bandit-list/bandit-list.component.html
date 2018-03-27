@@ -1,0 +1,34 @@
+<table class="table table-striped">
+  <tr>
+    <th>
+      Id
+    </th>
+    <th>
+      Nome Falso
+    </th>
+    <th>
+      Nome Real
+    </th>
+    <th></th>
+  </tr>
+  <tr *ngFor="let bandit of bandits;">
+    <td>
+      {{ bandit.id }}
+    </td>
+    <td>
+      {{ bandit.fake_name }}
+    </td>
+    <td>
+      {{ bandit.real_name }}
+    </td>
+    <td>
+        <span 
+          class="glyphicon glyphicon-remove" 
+          aria-hidden="true"
+          style="cursor:pointer"
+          (click)="onClickRemove(bandit)"></span>
+    </td>
+
+  </tr>
+
+</table>
