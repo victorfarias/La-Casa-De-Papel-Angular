@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms'
+import { HttpModule } from '@angular/http'
 
 
 import { AppComponent } from './app.component';
@@ -11,6 +12,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HostagesListComponent } from './hostages-list/hostages-list.component';
 import { routing } from './app.routing';
 import { BanditPageComponent } from './components/bandit/bandit-page/bandit-page.component';
+import { BanditService } from './services/bandit.service';
 
 
 
@@ -27,9 +29,10 @@ import { BanditPageComponent } from './components/bandit/bandit-page/bandit-page
   imports: [
     BrowserModule,
     FormsModule ,
-    routing   
+    routing,
+    HttpModule
   ],
-  providers: [],
+  providers: [BanditService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

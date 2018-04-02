@@ -5,8 +5,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-bandit-page',
   templateUrl: './bandit-page.component.html',
-  styleUrls: ['./bandit-page.component.css'],
-  providers: [BanditService]
+  styleUrls: ['./bandit-page.component.css']
 })
 export class BanditPageComponent implements OnInit {
 
@@ -16,11 +15,18 @@ export class BanditPageComponent implements OnInit {
    }
 
   ngOnInit() {
-    this.bandits = this.banditService.getBandits();
+    // this.bandits = this.banditService.getBandits();
+    this.banditService.getBandits()
+      .subscribe((data) => {
+        this.bandits = data;
+      }, 
+      (error) => console.log(error));
   }
 
   addBandit(bandit: Bandit){
-    this.banditService.addBandit(bandit);
+    this.banditService.addBandit(bandit)
+      .subscribe((data) => console.log(data),
+                (error)=>console.log(error));
   }
 
   removeBandit(bandit:Bandit){
