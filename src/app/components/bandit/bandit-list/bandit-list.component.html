@@ -1,4 +1,9 @@
-<table class="table table-striped">
+<div class="loading"
+     *ngIf="bandits==null">
+
+</div>
+
+<table class="table table-striped" *ngIf="bandits!=null">
   <tr>
     <th>
       Id

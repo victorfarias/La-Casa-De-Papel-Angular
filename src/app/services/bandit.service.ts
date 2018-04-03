@@ -17,6 +17,7 @@ export class BanditService {
     getBandits() {
         return this.http.get(this.url)
                 .map((response:Response) => {
+                    this.bandits = [];
                     for(let b of response.json()){
                         this.bandits.push(new Bandit(b.id, b.fake_name, b.real_name))
                     }
@@ -28,13 +29,14 @@ export class BanditService {
     addBandit(bandit: Bandit){
         return this.http.post(this.url, bandit)
                 .map((response: Response) =>  response.json())
-                .catch((error: Response) => Observable.throw(error))
+                .catch((error: Response) => Observable.throw(error));
 
     }
 
     removebandit(bandit: Bandit){
-        let index = this.bandits.indexOf(bandit);
-        this.bandits.splice(index, 1);
+        return this.http.delete(this.url + "/" + bandit.id)
+            .map((response:Response) => response.text)
+            .catch((error: Response) => Observable.throw(error));            
     }
 
 }

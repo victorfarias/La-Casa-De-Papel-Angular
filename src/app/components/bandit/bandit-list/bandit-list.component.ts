@@ -8,7 +8,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class BanditListComponent implements OnInit {
 
-  @Input() bandits: Bandit[];
+  @Input() bandits: Bandit[] = null;
   @Output() removeBandit = new EventEmitter();
 
   constructor() { }
